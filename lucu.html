@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untukkkk adekkkkkk ❤️</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #ffd1dc);
+            color: #8b5a7c;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header {
+            padding: 40px 0;
+            animation: fadeIn 2s ease;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+            color: #d44d80;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #a64d79;
+        }
+
+        .heart {
+            color: #ff4d88;
+            display: inline-block;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        .photo-section {
+            margin: 40px 0;
+            position: relative;
+        }
+
+        .photo-frame {
+            width: 350px;
+            height: 350px;
+            margin: 0 auto;
+            border-radius: 25px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border: 15px solid white;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+            background: linear-gradient(45deg, #ffd6e7, #fff0f5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .photo-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: #d44d80;
+        }
+
+        .photo-instruction {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #a64d79;
+        }
+
+        .message-section {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 25px;
+            margin: 40px 0;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1.5s ease;
+            border: 5px dashed #ffb6c1;
+        }
+
+        .message {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+
+        .interactive-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+
+        .love-button {
+            background: linear-gradient(45deg, #ff4d88, #ff80ab);
+            color: white;
+            border: none;
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 77, 136, 0.4);
+        }
+
+        .love-button:hover {
+            background: linear-gradient(45deg, #e0447a, #ff4d88);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 77, 136, 0.6);
+        }
+
+        .love-button:active {
+            transform: translateY(2px);
+        }
+
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart-float {
+            position: absolute;
+            color: rgba(255, 77, 136, 0.7);
+            font-size: 24px;
+            animation: floatUp 10s linear infinite;
+            bottom: -50px;
+        }
+
+        .cute-animals {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .animal {
+            font-size: 60px;
+            animation: bounce 3s infinite;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 20px;
+            font-size: 1rem;
+            color: #a64d79;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .photo-frame {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .message-section {
+                padding: 20px;
+            }
+            
+            .animal {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="heartsContainer"></div>
+    
+    <div class="container">
+        <header>
+            <h1>Untukkkkk <span class="heart">❤️</span> Adekkkkk</h1>
+            <p class="subtitle">Makasihhhh yaaa sudahhh barengggg barenggg terussss🤭</p>
+        </header>
+        
+        <section class="photo-section">
+            <div class="photo-frame">
+                <div class="photo-placeholder">
+                    <!-- Ganti dengan foto pacar Anda -->
+
+                    <img src="c:\Users\chais\AppData\Local\Packages\5319275A.WhatsAppDesktop_cv1g1gvanyjgm\TempState\E0688D13958A19E087E123148555E4B4\WhatsApp Image 2025-11-17 at 14.50.47_223658d4.jpg"
+                    <p>Foto Kita Berdua ❤️</p>
+                    <p class="photo-instruction">(Ganti dengan foto kalian berdua)</p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="cute-animals">
+            <div class="animal">🐰</div>
+            <div class="animal">🐻</div>
+            <div class="animal">🐱</div>
+            <div class="animal">🦊</div>
+        </div>
+        
+        <section class="message-section">
+            <div class="message">
+                <p>Sayangkuuuu cintakuuuu gumuskuuuu</p>
+                <p>Makasiihhh yaaa buattt adekkkk udahhhh samaaa masss terusss, makasihh yaaaa udaaaaa selaluuuu usahainnn apapunnn ituuuu buattt massss</p>
+                <p>akuuuu bersyukuurrr punyaaaa adekkkk, adekkkk bersyukurrr tidakkk punyaaa masss???</p>
+                <p>Terimaaa kasihhhh yaaa sudahhh selaluuu mendukungg masss, makasihhh sudahhh selaluuu adaaa diii saaattt susahhh maupunnnn senanggg</p>
+                <p>Massss janjiiii kitaaa bakalll terusss selamaaa lamanyaaa, masss takuttt kehilangannn adekkkkk☹️</p>
+                <p>Selamanyaaaa massss menjadiiii milikmuuuuu</p>
+                <p><strong>Chaisar-</strong></p>
+            </div>
+            
+            <div class="interactive-section">
+                <button class="love-button" id="loveButton">Kirim Ciuman 😘</button>
+                <button class="love-button" id="hugButton">Kirim Pelukan 🤗</button>
+                <button class="love-button" id="flowerButton">Kirim Bunga 💐</button>
+            </div>
+        </section>
+        
+        <footer>
+            <p>masss buattt untukkk berterimaaa kasihhh kepadaaa adekkkk💖💖💖💖</p>
+        </footer>
+    </div>
+
+    <script>
+        // Membuat hati mengambang
+        function createFloatingHearts() {
+            const heartsContainer = document.getElementById('heartsContainer');
+            const heartCount = 20;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart-float');
+                heart.innerHTML = '❤️';
+                
+                // Posisi acak
+                heart.style.left = Math.random() * 100 + 'vw';
+                
+                // Animasi dengan delay acak
+                heart.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                
+                // Ukuran acak
+                heart.style.fontSize = (Math.random() * 10 + 20) + 'px';
+                
+                heartsContainer.appendChild(heart);
+            }
+        }
+        
+        // Efek saat tombol ciuman diklik
+        document.getElementById('loveButton').addEventListener('click', function() {
+            createHeartsEffect('😘', 15);
+            showMessage('Ciuman virtual telah dikirim! 💋 masssss sayaangggg terusss samaaa adekkkk hihihih');
+        });
+        
+        // Efek saat tombol pelukan diklik
+        document.getElementById('hugButton').addEventListener('click', function() {
+            createHeartsEffect('🤗', 10);
+            showMessage('Pelukan hangat telah dikirim! 🫂 massss selaluuu adaaa untukkk kamuuuu');
+        });
+        
+        // Efek saat tombol bunga diklik
+        document.getElementById('flowerButton').addEventListener('click', function() {
+            createHeartsEffect('💐', 12);
+            showMessage('Bunga indah telah dikirim! 🌸 adekkkk selaluuuu cantikkkk hihihihhiii');
+        });
+        
+        // Efek visual saat tombol diklik
+        function createHeartsEffect(emoji, count) {
+            const buttons = document.querySelectorAll('.love-button');
+            const rect = buttons[0].getBoundingClientRect();
+            
+            for (let i = 0; i < count; i++) {
+                const element = document.createElement('div');
+                element.innerHTML = emoji;
+                element.style.position = 'fixed';
+                element.style.left = (rect.left + rect.width / 2) + 'px';
+                element.style.top = (rect.top + rect.height / 2) + 'px';
+                element.style.fontSize = '25px';
+                element.style.pointerEvents = 'none';
+                element.style.zIndex = '9999';
+                element.style.animation = `heartExplode 1.5s ease-out forwards`;
+                
+                document.body.appendChild(element);
+                
+                // Hapus elemen setelah animasi selesai
+                setTimeout(() => {
+                    if (document.body.contains(element)) {
+                        document.body.removeChild(element);
+                    }
+                }, 1500);
+            }
+        }
+        
+        // Menampilkan pesan
+        function showMessage(text) {
+            // Buat elemen pesan
+            const messageEl = document.createElement('div');
+            messageEl.textContent = text;
+            messageEl.style.position = 'fixed';
+            messageEl.style.top = '50%';
+            messageEl.style.left = '50%';
+            messageEl.style.transform = 'translate(-50%, -50%)';
+            messageEl.style.background = 'rgba(255, 255, 255, 0.9)';
+            messageEl.style.padding = '20px 30px';
+            messageEl.style.borderRadius = '15px';
+            messageEl.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.2)';
+            messageEl.style.zIndex = '10000';
+            messageEl.style.fontSize = '1.2rem';
+            messageEl.style.color = '#d44d80';
+            messageEl.style.border = '3px solid #ffb6c1';
+            messageEl.style.textAlign = 'center';
+            
+            document.body.appendChild(messageEl);
+            
+            // Hapus pesan setelah 2 detik
+            setTimeout(() => {
+                if (document.body.contains(messageEl)) {
+                    document.body.removeChild(messageEl);
+                }
+            }, 2000);
+        }
+        
+        // Style untuk efek animasi
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes heartExplode {
+                0% {
+                    transform: translate(0, 0) scale(1);
+                    opacity: 1;
+                }
+                100% {
+                    transform: translate(${Math.random() * 200 - 100}px, ${Math.random() * -150 - 50}px) scale(0);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+        
+        // Inisialisasi
+        window.onload = function() {
+            createFloatingHearts();
+            
+            // Animasi tambahan untuk hewan lucu
+            const animals = document.querySelectorAll('.animal');
+            animals.forEach((animal, index) => {
+                animal.style.animationDelay = `${index * 0.5}s`;
+            });
+        };
+    </script>
+</body>
+</html>
